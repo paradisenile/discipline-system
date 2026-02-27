@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Report System</title>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+<h2>Submit Report</h2>
+
+<form name="report" method="POST" data-netlify="true" enctype="multipart/form-data">
+
+<label>Batch</label>
+<select name="batch">
+  <option>Batch A</option>
+  <option>Batch B</option>
+</select>
+
+<label>Name</label>
+<select name="name">
+  <option>Ali</option>
+  <option>Sarah</option>
+</select>
+
+<label>Kesalahan</label>
+<select name="kesalahan">
+  <option>Lewat</option>
+  <option>Uniform</option>
+</select>
+
+<label>Upload Image</label>
+<input type="file" name="photo">
+
+<button type="submit">Submit</button>
+
+</form>
+
+<script>
+netlifyIdentity.on("logout", () => {
+  window.location.href = "/";
+});
+</script>
+
+</body>
+</html>
